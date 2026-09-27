@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CPMPLETE JS DOM</title>
+    <title>Email & Password Validator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+    <div class="container">
 
-    <form>
-        <input class="name" type="text" placeholder="name">
-        <br>
-        <div id="hide">
-            <small>3</small>
-            <br>
+        <div class="validator-card">
+
+            <h1>Account Validator</h1>
+            <p class="subtitle">Enter your email and password</p>
+
+            <form id="validatorForm">
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        autocomplete="off"
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                    >
+                    <small id="emailMessage"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                    >
+                    <small id="passwordMessage"></small>
+                </div>
+
+                <button type="submit">
+                    Validate
+                </button>
+
+                <p id="result"></p>
+
+            </form>
+
         </div>
-        <input type="email" placeholder="email">
-        <br>
-        <input type="password" placeholder="password">
-        <br>
-        <select id="select">
-            <option value="male">male</option>
-            <option value="female">female</option>
-            <option value="others">others</option>
-        </select>
-        <br>
-        <textarea placeholder="tell us about you"></textarea>
-        <br>
-        <input type="submit">
-    </form>
+
+    </div>
 
     <script src="JSDOM.js"></script>
 </body>
-
 </html>
