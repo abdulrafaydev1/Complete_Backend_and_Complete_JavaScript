@@ -36,5 +36,4 @@ form.addEventListener('submit', function (dets) {
         result.style.color = 'green'
     }
 
-
 })
