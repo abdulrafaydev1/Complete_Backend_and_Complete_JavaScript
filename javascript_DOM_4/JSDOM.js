@@ -69,6 +69,7 @@ function showUser(arr) {
 
         const blurredLayer = document.createElement("div");
         blurredLayer.classList.add("blurred-layer");
+        blurredLayer.style.backgroundImage = `url${user.pic}`
 
         const content = document.createElement("div");
         content.classList.add("content");
@@ -89,11 +90,19 @@ function showUser(arr) {
 
         // Cards container mein card add karo
         const cardsContainer = document.querySelector(".cards-container");
-
         cardsContainer.appendChild(card);
+
     })
 }
 
 showUser(users)
 
+let input = document.querySelector('.search-input')
+input.addEventListener('input', function(){
+    let newUser = users.filter((user) => {
+        return user.name.startsWith(input.value);  
+    })
 
+    document.querySelector('.card').innerHTML = ''
+    showUser(newUser) 
+})
