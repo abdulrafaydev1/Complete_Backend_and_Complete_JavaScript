@@ -36,5 +36,4 @@ form.addEventListener('submit', function (dets) {
         document.querySelector("#result").textContent = 'sahi hai sub kuch'
     }
 
-
 })
