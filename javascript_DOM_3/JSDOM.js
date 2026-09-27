@@ -26,6 +26,4 @@ form.addEventListener('submit', function (dets) {
     container.appendChild(h5)
     container.appendChild(btn)
     main.appendChild(container)
-
-
 })
