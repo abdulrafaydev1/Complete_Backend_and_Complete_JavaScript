@@ -22,102 +22,149 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-family: "Inter", Arial, sans-serif;
-    background:
-        radial-gradient(circle at top left, #1e293b, transparent 35%),
-        radial-gradient(circle at bottom right, #0f766e, transparent 35%),
-        #0b1 50;
-    color: #ffffff;
+
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease;
 }
 
-/* Main Card */
-.glass-card {
-    width: min(430px, 90%);
-    padding: 35px 32px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+/* =========================
+   LIGHT THEME
+========================= */
+
+body.light {
+    background: #f4f7fb;
+    color: #111827;
+}
+
+/* =========================
+   DARK THEME
+========================= */
+
+body.dark {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.contianer {
+    width: min(440px, 90%);
+    padding: 40px 35px;
+
+    text-align: center;
+
     border-radius: 24px;
 
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
     background: rgba(255, 255, 255, 0.08);
+
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
     box-shadow:
-        0 50px 50px rgba(0, 0, 0, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        0 20px 50px rgba(0, 0, 0, 0.15);
 
-    text-align: center;
+    transition:
+        background 0.4s ease,
+        border 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.3s ease;
 }
 
-/* Heading */
-.glass-card h2 {
+.contianer:hover {
+    transform: translateY(-4px);
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.contianer h1 {
     margin-bottom: 25px;
-    font-size: 24px;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+#toggleTheme {
+    padding: 13px 24px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #111827;
+    color: #ffffff;
+
+    font-size: 15px;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: capitalize;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
 }
 
-/* Progress Container */
-.progress-contaier {
-    width: 100%;
-    height: 14px;
-    overflow: hidden;
-
-    border-radius: 100px;
-    background: rgba(255, 255, 255, 0.1);
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.25);
-}
-
-/* Progress Bar */
-.progress-bar {
-    width: 0%;
-    height: 100%;
-
-    border-radius: inherit;
-
-    background: linear-gradient(
-        90deg,
-        #38bdf8,
-        #6366f1
-    );
+#toggleTheme:hover {
+    transform: translateY(-2px);
 
     box-shadow:
-        0 0 12px rgba(99, 102, 241, 0.7);
-
-    transition: width 0.5s all ease-in-out;
+        0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Percentage */
-.percent {
-    margin-top: 18px;
-
-    font-size: 18px;
-    font-weight: 600;
-
-    letter-spacing: 1px;
-    color: rgba(255, 255, 255, 0.9);
+#toggleTheme:active {
+    transform: scale(0.97);
 }
 
-/* Responsive */
+/* =========================
+   DARK THEME BUTTON
+========================= */
+
+body.dark #toggleTheme {
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+/* =========================
+   DARK THEME CARD
+========================= */
+
+body.dark .contianer {
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 480px) {
-    .glass-card {
-        padding: 28px 22px;
-        border-radius: 50px;
+    .contianer {
+        padding: 30px 22px;
     }
 
-    .glass-card h2 {
-        font-size: 21px;
+    .contianer h1 {
+        font-size: 24px;
     }
 
-    .percent {
-        font-size: 16px;
+    #toggleTheme {
+        width: 100%;
     }
-}
-
-.div{
-    padding: 50px 50px;
-    border-radius: 20px;
-    background-color: #1b1a1a;
 }
