@@ -1,10 +1,12 @@
-let nm = document.querySelector('#name')
+let input = document.querySelector('.name')
 let form = document.querySelector('form')
 
-form.addEventListener("submit", function(dets){
+form.addEventListener("submit", function (dets) {
     dets.preventDefault()
 
-    if(nm.value.lenght <= 2){
-        console.log('kya kar raha hai bahi')
+    if (input.value.length <= 2) {
+        console.log('sahi nahi hai')
+    } else {
+        console.log('sahi hai')
     }
 })
