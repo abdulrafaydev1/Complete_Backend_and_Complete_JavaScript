@@ -18,4 +18,10 @@
 
 
 
-localStorage.setItem('name', "rafay kya hall hai apka")
+// sessionStorage.setItem('name', 'rafay')
+
+localStorage.setItem("name", JSON.stringify({
+        name: "rafay",
+    age: 30,
+    city: 'karachi'
+}))
