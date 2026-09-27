@@ -69,7 +69,7 @@ function showUser(arr) {
 
         const blurredLayer = document.createElement("div");
         blurredLayer.classList.add("blurred-layer");
-        blurredLayer.style.backgroundImage = `url${user.pic}`
+        // blurredLayer.style.backgroundImage = `url${user.pic}`
 
         const content = document.createElement("div");
         content.classList.add("content");
