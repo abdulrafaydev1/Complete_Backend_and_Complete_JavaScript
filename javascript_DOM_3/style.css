@@ -86,7 +86,7 @@ body {
     box-shadow:
         0 0 12px rgba(99, 102, 241, 0.7);
 
-    transition: width 0.3s ease;
+    transition: width 0.5s all ease-in-out;
 }
 
 /* Percentage */
