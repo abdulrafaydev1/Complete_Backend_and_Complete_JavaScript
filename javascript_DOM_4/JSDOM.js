@@ -20,6 +20,11 @@ const users = [
         bio: "Full stack developer passionate about APIs, databases, and scalable applications."
     },
     {
+        name: "Hassan Rauf",
+        pic: "https://i.pravatar.cc/300?img=10",
+        bio: "Web developer passionate about creating fast, accessible, and modern websites."
+    },
+    {
         name: "Ayan Malik",
         pic: "https://i.pravatar.cc/300?img=5",
         bio: "UI designer who turns creative ideas into beautiful and user-friendly experiences."
@@ -52,41 +57,43 @@ const users = [
 ];
 
 function showUser(arr) {
+    arr.forEach(function (user) {
 
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const img = document.createElement("img");
+        img.classList.add("bg-img");
+        img.src = user.pic
+        img.alt = "User";
+
+        const blurredLayer = document.createElement("div");
+        blurredLayer.classList.add("blurred-layer");
+
+        const content = document.createElement("div");
+        content.classList.add("content");
+
+        const h3 = document.createElement("h3");
+        h3.textContent = user.name
+
+        const p = document.createElement("p");
+        p.textContent = user.bio
+        // Content ke andar h3 aur p
+        content.appendChild(h3);
+        content.appendChild(p);
+
+        // Card ke andar sab elements
+        card.appendChild(img);
+        card.appendChild(blurredLayer);
+        card.appendChild(content);
+
+        // Cards container mein card add karo
+        const cardsContainer = document.querySelector(".cards-container");
+
+        cardsContainer.appendChild(card);
+    })
 }
 
 showUser(users)
 
-const card = document.createElement("div");
-card.classList.add("card");
 
-const img = document.createElement("img");
-img.classList.add("bg-img");
-img.src = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80";
-img.alt = "User";
-
-const blurredLayer = document.createElement("div");
-blurredLayer.classList.add("blurred-layer");
-
-const content = document.createElement("div");
-content.classList.add("content");
-
-const h3 = document.createElement("h3");
-h3.textContent = "User 456";
-
-const p = document.createElement("p");
-p.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quis.";
-
-// Content ke andar h3 aur p
-content.appendChild(h3);
-content.appendChild(p);
-
-// Card ke andar sab elements
-card.appendChild(img);
-card.appendChild(blurredLayer);
-card.appendChild(content);
-
-// Cards container mein card add karo
-const cardsContainer = document.querySelector(".cards-container");
-
-cardsContainer.appendChild(card);
