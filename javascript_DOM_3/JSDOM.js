@@ -6,4 +6,8 @@
 //     console.log('setInterval');
 // }, 5000)
 
+let time = setTimeout(function(){
+    console.log('hey')
+}, 2000)
 
+clearTimeout(time);
