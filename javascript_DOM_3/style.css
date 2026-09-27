@@ -11,119 +11,107 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.container {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    font-family: "Inter", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, #1e293b, transparent 35%),
+        radial-gradient(circle at bottom right, #0f766e, transparent 35%),
+        #0b1120;
+    color: #ffffff;
 }
 
-.validator-card {
-    width: 420px;
-    padding: 35px;
-    background: #111;
-    border: 1px solid #2a2a2a;
-    border-radius: 18px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-}
+/* Main Card */
+.glass-card {
+    width: min(430px, 90%);
+    padding: 35px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
 
-.validator-card h1 {
-    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
     text-align: center;
-    font-size: 28px;
 }
 
-.subtitle {
-    margin-bottom: 30px;
-    text-align: center;
-    color: #888;
-    font-size: 14px;
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
+/* Heading */
+.glass-card h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
     font-weight: 600;
-    color: #ddd;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
 }
 
-.input-group input {
+/* Progress Container */
+.progress-contaier {
     width: 100%;
-    height: 48px;
-    padding: 0 15px;
+    height: 14px;
+    overflow: hidden;
 
-    border: 1px solid #333;
-    border-radius: 9px;
-    outline: none;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.1);
 
-    background: #1a1a1a;
-    color: #fff;
-
-    font-size: 15px;
-    transition: 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 
-.input-group input::placeholder {
-    color: #666;
+/* Progress Bar */
+.progress-bar {
+    width: 0%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #38bdf8,
+        #6366f1
+    );
+
+    box-shadow:
+        0 0 12px rgba(99, 102, 241, 0.7);
+
+    transition: width 0.3s ease;
 }
 
-.input-group input:focus {
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
-}
-
-.input-group small {
-    display: block;
-    margin-top: 7px;
-    min-height: 16px;
-    font-size: 12px;
-}
-
-button {
-    width: 100%;
-    height: 48px;
-
-    border: none;
-    border-radius: 9px;
-
-    background: #2563eb;
-    color: white;
-
-    font-size: 15px;
-    font-weight: 600;
-
-    cursor: pointer;
-    transition: 0.25s ease;
-}
-
-button:hover {
-    background: #1d4ed8;
-    transform: translateY(-1px);
-}
-
-button:active {
-    transform: translateY(0);
-}
-
-#result {
+/* Percentage */
+.percent {
     margin-top: 18px;
-    text-align: center;
-    font-size: 14px;
-    min-height: 20px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
-/* Optional classes for your JavaScript */
+/* Responsive */
+@media (max-width: 480px) {
+    .glass-card {
+        padding: 28px 22px;
+        border-radius: 20px;
+    }
 
-.valid {
-    border-color: #22c55e !important;
-}
+    .glass-card h2 {
+        font-size: 21px;
+    }
 
-.invalid {
-    border-color: #ef4444 !important;
+    .percent {
+        font-size: 16px;
+    }
 }
