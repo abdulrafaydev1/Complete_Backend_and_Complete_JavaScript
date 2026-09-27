@@ -1,7 +1,7 @@
 let form = document.querySelector('form')
 let main = document.querySelector('#main')
 
-form.addEventListener('click', function(dets){
+form.addEventListener('submit', function(dets){
     dets.preventDefault()
 
     let container = document.createElement('div')
