@@ -18,3 +18,4 @@
 
 
 
+localStorage.setItem('name', "rafay kya hall hai apka")
