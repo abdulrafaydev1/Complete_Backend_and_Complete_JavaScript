@@ -1,13 +1,20 @@
-function abcd() {
-    console.log(a);
+/* ya mara pass ek function hai or is function ma kuch data hai
+function abcd(){
+    var a = 12; // ya function ka data hai 
+    let b = 13; // ya function ka data hai 
+    let c = 14; // ya function ka data hai 
 }
 
-const a = 12;
-abcd()
+or jub ya functon run kare ga to javascript ma box banaega or us box ma is function ka sara data chale jaeega
+*/
 
+var x = 10;
 
-// {
-//     let a = 12;
-// }
+function multiply(num) {
+  var result = num * 2;
+  return result;
+}
 
-// console.log(a)
+var answer = multiply(x);
+
+console.log(answer);
