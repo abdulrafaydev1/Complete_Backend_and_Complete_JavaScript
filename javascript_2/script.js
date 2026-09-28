@@ -7,3 +7,9 @@ function abcd(){
 
 or jub ya functon run kare ga to javascript ma box banaega or us box ma is function ka sara data chale jaeega
 */
+
+// js -> lexical scoping => ya kaha tha hai ki app kaha per hon  
+
+function abcd(){
+    var a = 12;
+}
