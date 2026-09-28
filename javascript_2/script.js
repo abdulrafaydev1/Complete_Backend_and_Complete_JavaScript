@@ -16,5 +16,4 @@ function multiply(num) {
 }
 
 var answer = multiply(x);
-
 console.log(answer);
