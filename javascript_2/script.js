@@ -7,13 +7,3 @@ function abcd(){
 
 or jub ya functon run kare ga to javascript ma box banaega or us box ma is function ka sara data chale jaeega
 */
-
-var x = 10;
-
-function multiply(num) {
-  var result = num * 2;
-  return result;
-}
-
-var answer = multiply(x);
-console.log(answer);
