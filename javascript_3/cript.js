@@ -21,5 +21,5 @@ obj.sayName()
 
 // event handel
 document.querySelector('h1').addEventListener('click', function(){
-    alert('chal raha hai sahi se')
+
 })
