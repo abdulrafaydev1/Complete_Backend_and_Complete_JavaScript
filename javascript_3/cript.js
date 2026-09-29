@@ -136,3 +136,12 @@ let photo = document.querySelector('#photo')
 
 
 
+function CreateBusites(){
+    this.name = 'super',
+    this.price = 50,
+    this.qty = 10,
+    this.company = 'the making factory'
+}
+
+const busite1 = new CreateBusites
+console.log(busite1)
