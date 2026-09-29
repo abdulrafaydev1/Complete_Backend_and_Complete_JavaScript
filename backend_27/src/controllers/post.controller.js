@@ -5,6 +5,7 @@ const createPost = async (req, res) => {
     console.log(req.body);
 
     const post = await postModel.create({
+        title: req.body.title,
         description: req.body.description
     });
 
