@@ -19,7 +19,7 @@ obj.sayName()
 // console.log(obj)
 
 
-// event handel
+// event handel is ma ya ho raha hai ky gaer kisi element per addEventListener lagaya hai to this is ya wo milga ka kis element per addEventListener hai ro this is wo element milaga
 document.querySelector('h1').addEventListener('click', function(){
     console.log(this.style.color = 'red');
     
