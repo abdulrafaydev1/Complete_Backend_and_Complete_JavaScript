@@ -19,7 +19,7 @@ function createToaster(config) {
 let toaster = createToaster({
     positionX: "right",
     positionY: "top",
-    Theme: 'light',
+    Theme: 'dark',
     duration: 3,
 })
 toaster("donwload done")
