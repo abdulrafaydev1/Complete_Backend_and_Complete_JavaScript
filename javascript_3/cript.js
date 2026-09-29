@@ -62,8 +62,8 @@ const userManager = {
     users: [],
     initial: function () {
         form.addEventListener('submit', this.formSubmit.bind(this))
-     },
-    formSubmit: function(dets) {
+    },
+    formSubmit: function (dets) {
         dets.preventDefault()
         console.log(this)
     },
