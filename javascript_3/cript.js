@@ -1,19 +1,17 @@
-function ClickMe() {
-    let click = 0;
+function createToaster(config) {
     return function () {
-        if(click < 5){
-            click++
-            console.log(click)
-        } else {
-            console.error("mistake")
-        }
+        console.log(config)
     }
+
 }
 
-let fac = ClickMe()
-fac()
-fac()
-fac()
-fac()
-fac()
-fac()
+
+let toaster = createToaster({
+    positionX: "right",
+    positionY: "top",
+    Theme: 'dark',
+    duration: 3,
+})
+toaster()
+
+
