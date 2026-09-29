@@ -56,79 +56,83 @@
 
 // abcd.apply(obj2, [1, 2, 3, 4, 5, 6, 7, 8, 9])
 
+//!
+/*
 let form = document.querySelector("#userForm")
 let userName = document.querySelector('#name')
 let role = document.querySelector('#role')
 let bio = document.querySelector('#bio')
 let photo = document.querySelector('#photo')
+*/
+
+// const userManager = {
+//     users: [],
+//     initial: function () {
+//         form.addEventListener('submit', this.formSubmit.bind(this))
+//     },
+//     formSubmit: function (dets) {
+//         dets.preventDefault()
+//         console.log(this)
+//         this.addUser()
+//         this.renderUi()
+//         this.removeUser()
+
+//     },
+//     addUser: function () {
+//         this.users.push({
+//             userName: userName.value,
+//             role: role.value,
+//             bio: bio.value,
+//             photo: photo.value
+//         })
+
+//         form.reset()
+//     },
+//     renderUi: function () {
+//         this.users.forEach(function (user) {
+//             console.log(user)
+//             let container = document.createElement('main')
+//             container.classList.add("container")
+//             let section = document.createElement("section")
+//             section.classList.add("users-section")
+//             let userCard = document.createElement('div')
+//             userCard.classList.add("user-card")
+//             let avatar = document.createElement('div')
+//             avatar.classList.add("avatar")
+//             let avatarImg = document.createElement('img')
+//             avatarImg.setAttribute("src", user.photo)
+//             let h3 = document.createElement('h3')
+//             h3.textContent = user.userName
+//             let role = document.createElement('span')
+//             role.classList.add('role')
+//             role.textContent = user.role
+//             let p = document.createElement('p')
+//             p.textContent = user.bio
+//             let btn = document.createElement('button')
+//             btn.textContent = 'delete post'
+//             btn.addEventListener("click", function(){
+
+//             })
+
+//             avatar.appendChild(avatarImg)
+//             userCard.appendChild(h3)
+//             userCard.appendChild(role)
+//             userCard.appendChild(p)
+//             userCard.appendChild(avatar)
+//             userCard.appendChild(btn)
+//             section.appendChild(userCard)
+//             // container.appendChild(section)
+
+//             document.querySelector('.users').appendChild(section)
+//             document.querySelector('users-section').innerHTML = ''
+//             // document.querySelector('.users-section').appendChild(section)
+//             // document.body.appendChild(container)
+//         })
+//     },
+//     removeUser: function () {}
+// }
+
+// userManager.initial()
 
 
-const userManager = {
-    users: [],
-    initial: function () {
-        form.addEventListener('submit', this.formSubmit.bind(this))
-    },
-    formSubmit: function (dets) {
-        dets.preventDefault()
-        console.log(this)
-        this.addUser()
-        this.renderUi()
-        this.removeUser()
-
-    },
-    addUser: function () {
-        this.users.push({
-            userName: userName.value,
-            role: role.value,
-            bio: bio.value,
-            photo: photo.value
-        })
-
-        form.reset()
-    },
-    renderUi: function () {
-        this.users.forEach(function (user) {
-            console.log(user)
-            let container = document.createElement('main')
-            container.classList.add("container")
-            let section = document.createElement("section")
-            section.classList.add("users-section")
-            let userCard = document.createElement('div')
-            userCard.classList.add("user-card")
-            let avatar = document.createElement('div')
-            avatar.classList.add("avatar")
-            let avatarImg = document.createElement('img')
-            avatarImg.setAttribute("src", user.photo)
-            let h3 = document.createElement('h3')
-            h3.textContent = user.userName
-            let role = document.createElement('span')
-            role.classList.add('role')
-            role.textContent = user.role
-            let p = document.createElement('p')
-            p.textContent = user.bio
-            let btn = document.createElement('button')
-            btn.textContent = 'delete post'
-            btn.addEventListener("click", function(){
-                
-            })
-
-            avatar.appendChild(avatarImg)
-            userCard.appendChild(h3)
-            userCard.appendChild(role)
-            userCard.appendChild(p)
-            userCard.appendChild(avatar)
-            userCard.appendChild(btn)
-            section.appendChild(userCard)
-            // container.appendChild(section)
-
-            document.querySelector('.users').appendChild(section)
-            document.querySelector('users-section').innerHTML = ''
-            // document.querySelector('.users-section').appendChild(section)
-            // document.body.appendChild(container)
-        })
-    },
-    removeUser: function () {}
-}
-
-userManager.initial()
 
