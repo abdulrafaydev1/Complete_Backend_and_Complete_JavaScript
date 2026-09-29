@@ -84,7 +84,7 @@ const userManager = {
             photo: photo.value
         })
 
-        // form.reset()
+        form.reset()
     },
     renderUi: function () {
         this.users.forEach(function (user) {
@@ -108,8 +108,8 @@ const userManager = {
             p.textContent = user.bio
             let btn = document.createElement('button')
             btn.textContent = 'delete post'
-            btn.addEventListener('click', function(){
-               section.remove()
+            btn.addEventListener("click", function(){
+                
             })
 
             avatar.appendChild(avatarImg)
