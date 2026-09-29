@@ -1,8 +1,14 @@
 const postModel = require('../models/post.model')
 
-const createPost = (res, req) => {
+const createPost = async (req, res) => {
 
-    let posts = postModel.create(req.body)
+    await postModel.create({
+        description: req.body.description,
+    })
+
+    res.status(201).json({
+        message: 'post created',
+    })
 
 }
 
