@@ -1,12 +1,10 @@
-let a = 12;
-
 function abcd(){
-    console.log(a)
+    let a = 12;
+    return function (){
+        console.log(a)
+    }
 }
 
-function abcc(){
-    var a = 12;
-    abcd()
-}
-
-abcc()
+let func = abcd()
+console.log(func())
+console.log(abcd())
