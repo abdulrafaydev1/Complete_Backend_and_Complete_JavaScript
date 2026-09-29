@@ -152,6 +152,6 @@ function CreateBusites(name, price, qty, company, color){
 const busite1 = new CreateBusites('oreo', 30, 5, 'the making factoy', "black")
 const busite2 = new CreateBusites('super', 20, 10, 'super company', "red")
  
-// console.log(busite1)
+console.log(busite1)
 // console.log(busite2)
  
