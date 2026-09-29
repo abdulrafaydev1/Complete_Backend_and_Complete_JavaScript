@@ -57,6 +57,11 @@
 // abcd.apply(obj2, [1, 2, 3, 4, 5, 6, 7, 8, 9])
 
 let form = document.querySelector("#userForm")
+let name = document.querySelector('#name')
+let role = document.querySelector('#role')
+let bio = document.querySelector('#bio')
+let photo = document.querySelector('#photo')
+
 
 const userManager = {
     users: [],
@@ -66,8 +71,42 @@ const userManager = {
     formSubmit: function (dets) {
         dets.preventDefault()
         console.log(this)
+        this.addUser()
+        this.renderUi()
+
     },
-    addUser: function () { },
+    addUser: function () {
+        this.users.push({
+            name: name.value,
+            role: role.value,
+            bio: bio.value,
+            photo: photo.value
+        })
+
+        form.reset()
+    },
+    renderUi: function () {
+        let userCard = document.createElement('div')
+        userCard.classList.add("user-card")
+        let avatar = document.createElement('div')
+        avatar.classList.add("avatar")
+        let avatarImg = document.createElement('img')
+        let h3 = document.createElement('h3')
+        h3.textContent = name.value
+        let role = document.createElement('span')
+        role.classList.add('role')
+        let p = document.createElement('p')
+
+        avatar.appendChild(avatarImg)
+        userCard.appendChild(h3)
+        userCard.appendChild(role)
+        userCard.appendChild(p)
+        userCard.appendChild(avatar)
+        document.body.appendChild(userCard)
+        
+
+
+    },
     removeUser: function () { }
 }
 
