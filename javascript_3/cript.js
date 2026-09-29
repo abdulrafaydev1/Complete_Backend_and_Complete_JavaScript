@@ -17,3 +17,9 @@ const obj = {
 
 obj.sayName()
 // console.log(obj)
+
+
+// event handel
+document.querySelector('h1').addEventListener('click', function(){
+    alert('chal raha hai ')
+})
