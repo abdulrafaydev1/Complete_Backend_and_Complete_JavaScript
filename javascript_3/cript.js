@@ -73,6 +73,7 @@ const userManager = {
         console.log(this)
         this.addUser()
         this.renderUi()
+        this.removeUser()
 
     },
     addUser: function () {
@@ -83,7 +84,7 @@ const userManager = {
             photo: photo.value
         })
 
-        form.reset()
+        // form.reset()
     },
     renderUi: function () {
         this.users.forEach(function (user) {
@@ -105,21 +106,28 @@ const userManager = {
             role.textContent = user.role
             let p = document.createElement('p')
             p.textContent = user.bio
+            let btn = document.createElement('button')
+            btn.textContent = 'delete post'
+            btn.addEventListener('click', function(){
+               section.remove()
+            })
 
             avatar.appendChild(avatarImg)
             userCard.appendChild(h3)
             userCard.appendChild(role)
             userCard.appendChild(p)
             userCard.appendChild(avatar)
+            userCard.appendChild(btn)
             section.appendChild(userCard)
-            container.appendChild(section)
-            document.body.appendChild(container)
+            // container.appendChild(section)
+
+            document.querySelector('.users').appendChild(section)
+            document.querySelector('users-section').innerHTML = ''
+            // document.querySelector('.users-section').appendChild(section)
+            // document.body.appendChild(container)
         })
-
-
-
     },
-    removeUser: function () { }
+    removeUser: function () {}
 }
 
 userManager.initial()
