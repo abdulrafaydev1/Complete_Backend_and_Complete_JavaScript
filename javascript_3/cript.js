@@ -57,7 +57,7 @@
 // abcd.apply(obj2, [1, 2, 3, 4, 5, 6, 7, 8, 9])
 
 let form = document.querySelector("#userForm")
-let name = document.querySelector('#name')
+let userName = document.querySelector('#name')
 let role = document.querySelector('#role')
 let bio = document.querySelector('#bio')
 let photo = document.querySelector('#photo')
@@ -77,7 +77,7 @@ const userManager = {
     },
     addUser: function () {
         this.users.push({
-            name: name.value,
+            userName: userName.value,
             role: role.value,
             bio: bio.value,
             photo: photo.value
@@ -86,24 +86,36 @@ const userManager = {
         form.reset()
     },
     renderUi: function () {
-        let userCard = document.createElement('div')
-        userCard.classList.add("user-card")
-        let avatar = document.createElement('div')
-        avatar.classList.add("avatar")
-        let avatarImg = document.createElement('img')
-        let h3 = document.createElement('h3')
-        h3.textContent = name.value
-        let role = document.createElement('span')
-        role.classList.add('role')
-        let p = document.createElement('p')
+        this.users.forEach(function (user) {
+            console.log(user)
+            let container = document.createElement('main')
+            container.classList.add("container")
+            let section = document.createElement("section")
+            section.classList.add("users-section")
+            let userCard = document.createElement('div')
+            userCard.classList.add("user-card")
+            let avatar = document.createElement('div')
+            avatar.classList.add("avatar")
+            let avatarImg = document.createElement('img')
+            avatarImg.setAttribute("src", user.photo)
+            let h3 = document.createElement('h3')
+            h3.textContent = user.userName
+            let role = document.createElement('span')
+            role.classList.add('role')
+            role.textContent = user.role
+            let p = document.createElement('p')
+            p.textContent = user.bio
 
-        avatar.appendChild(avatarImg)
-        userCard.appendChild(h3)
-        userCard.appendChild(role)
-        userCard.appendChild(p)
-        userCard.appendChild(avatar)
-        document.body.appendChild(userCard)
-        
+            avatar.appendChild(avatarImg)
+            userCard.appendChild(h3)
+            userCard.appendChild(role)
+            userCard.appendChild(p)
+            userCard.appendChild(avatar)
+            section.appendChild(userCard)
+            container.appendChild(section)
+            document.body.appendChild(container)
+        })
+
 
 
     },
