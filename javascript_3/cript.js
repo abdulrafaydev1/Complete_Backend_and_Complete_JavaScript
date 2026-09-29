@@ -1,10 +1,19 @@
-function abcd(){
-    let a = 12;
-    return function (){
-        console.log(a)
+function ClickMe() {
+    let click = 0;
+    return function () {
+        if(click < 5){
+            click++
+            console.log(click)
+        } else {
+            console.error("mistake")
+        }
     }
 }
 
-let func = abcd()
-console.log(func())
-console.log(abcd())
+let fac = ClickMe()
+fac()
+fac()
+fac()
+fac()
+fac()
+fac()
