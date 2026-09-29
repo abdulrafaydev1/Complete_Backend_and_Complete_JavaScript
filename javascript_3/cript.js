@@ -61,12 +61,12 @@ let form = document.querySelector("#userForm")
 const userManager = {
     users: [],
     initial: function () {
-        form.addEventListener('submit', function(dets){
-            dets.preventDefault()
-            
-            console.log(this)
-        })
+        form.addEventListener('submit', this.formSubmit.bind(this))
      },
+    formSubmit: function(dets) {
+        dets.preventDefault()
+        console.log(this)
+    },
     addUser: function () { },
     removeUser: function () { }
 }
