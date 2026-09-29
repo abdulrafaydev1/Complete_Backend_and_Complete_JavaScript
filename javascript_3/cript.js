@@ -136,16 +136,22 @@ let photo = document.querySelector('#photo')
 
 
 
-function CreateBusites(name, price, qty, company){
+function CreateBusites(name, price, qty, company, color){
     this.name = name,
     this.price = price,
     this.qty = qty,
     this.company = company
+    this.write = function(text){
+        let h1 = document.createElement('h1')
+        h1.textContent = text
+        h1.style.color = color
+        document.body.appendChild(h1)
+    }
 }
 
-const busite1 = new CreateBusites('oreo', 30, 5, 'the making factoy')
-const busite2 = new CreateBusites('super', 20, 10, 'super company')
+const busite1 = new CreateBusites('oreo', 30, 5, 'the making factoy', "black")
+const busite2 = new CreateBusites('super', 20, 10, 'super company', "red")
  
-console.log(busite1)
-console.log(busite2)
+// console.log(busite1)
+// console.log(busite2)
  
