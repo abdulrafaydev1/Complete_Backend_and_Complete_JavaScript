@@ -11,3 +11,23 @@
 !Q,API kya hai?
 *Ans:API yani Application Programming Interface ek interface hai jo different software components ko aapas mein communicate karne deta hai. Web application mein frontend API ke through backend ko request bhej sakta hai, aur backend API ke through response return karta hai. API ke zariye data fetch, create, update aur delete jaise operations perform kiye ja sakte hain.
 */
+
+function outer(){
+    var counter = 0
+
+    function inner(){
+        counter++
+        console.log("Couter is plus", counter)
+    }
+
+    return inner
+}
+
+const result = outer()
+result()
+result()
+result()
+console.log(result);
+
+
+
