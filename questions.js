@@ -38,7 +38,29 @@ function sayBye() {
 }
 
 greet("Abdul", sayBye);
+
+!Q, Higher-Order Function
+function calculate(a, b, operation) {
+  return operation(a, b);
+}
+
+function add(x, y) {
+  return x + y;
+}
+
+console.log(calculate(5, 3, add));
 */
+
+function show() {
+  console.log(this);
+}
+
+show();
+
+kya hall hai apka mujhe nhi pata yar app kon hon app ka naam kya hai 
+
+
+
 
 
 
