@@ -1,0 +1,20 @@
+{
+  "name": "backend-practice-with-sheryians-coding-school",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/abdulrafaydev1/Complete_Backend#readme",
+  "bugs": {
+    "url": "https://github.com/abdulrafaydev1/Complete_Backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulrafaydev1/Complete_Backend.git"
+  },
+  "license": "ISC",
+  "author": "Abdul Rafay",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
