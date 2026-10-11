@@ -47,3 +47,13 @@ const fs = require("fs");
 //     else console.log(files)
 // })
 
+// fs.rename('rafay.txt', 'rehman.txt', () => {
+//     if (err) console.log(err)
+//     else console.log(files)
+// })
+
+// fs.copyFile('rehman.txt', 'copy.txt', (err) => {
+//     if (err) console.log(err)
+//     else console.log(files)
+// })
+
