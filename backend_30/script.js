@@ -1,12 +1,18 @@
-const fs = require('fs');
+const fs = require("fs");
 
-fs.writeFile('example.txt', 'kya hall hai', function(err){
-    if(err) console.error(err)
-    else console.log('done')
-})
+// fs.writeFile("rafay.txt", "Hello, Rafay!", (err) => {
+//     if (err) {
+//         console.error(err);
+//     } else {
+//         console.log("File created successfully");
+//     }
+// });
 
-fs.copyFile('example.txt', './my-new-folder/example2.txt', function(err){
-    if(err) console.error(err)
-    else console.log('done')
-})
+// fs.readFile("rafay.txt", "utf8", (err, data) => {
+//     if (err) {
+//         console.error(err);
+//     } else {
+//         console.log(data);
+//     }
+// });
 
