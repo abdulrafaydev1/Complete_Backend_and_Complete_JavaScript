@@ -39,8 +39,5 @@ fs.mkdir('uploads', (err) => {
         console.log(err)
         return;
     }
-
-
     else console.log('done')
-
 })
