@@ -16,3 +16,12 @@ const fs = require("fs");
 //     }
 // });
 
+// fs.appendFile('rafay.txt', '\nI am learning javascript', function(err){
+//     if(err){
+//         console.log(err)
+//         return;
+//     }
+
+//     else console.log('done')
+// })
+
