@@ -1,6 +1,12 @@
 const fs = require('fs');
 
-fs.unlink('./copy/chacha.txt', function(err){
+fs.writeFile('example.txt', 'kya hall hai', function(err){
     if(err) console.error(err)
-    else console.log('file removed')
+    else console.log('done')
 })
+
+fs.copyFile('example.txt', './my-new-folder/example2.txt', function(err){
+    if(err) console.error(err)
+    else console.log('done')
+})
+
