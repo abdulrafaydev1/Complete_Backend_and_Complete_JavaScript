@@ -1,4 +1,4 @@
-var shaihai = 12;
-var shaihai = 12;
-console.log(shaihai);
-console.log(shaihai);
+var a = 12;
+var a = 12;
+console.log(a);
+console.log(a);
