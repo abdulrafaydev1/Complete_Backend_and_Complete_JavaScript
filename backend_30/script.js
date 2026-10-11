@@ -25,11 +25,22 @@ const fs = require("fs");
 //     else console.log('done')
 // })
 
-fs.unlink('rafay.txt', (err) =>{
-    if(err){
+// fs.unlink('rafay.txt', (err) =>{
+//     if(err){
+//         console.log(err)
+//         return;
+//     }
+
+//     else console.log('done')
+// })
+
+fs.mkdir('uploads', (err) => {
+    if (err) {
         console.log(err)
         return;
     }
 
+
     else console.log('done')
+
 })
