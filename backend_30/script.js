@@ -34,10 +34,16 @@ const fs = require("fs");
 //     else console.log('done')
 // })
 
-fs.mkdir('uploads', (err) => {
-    if (err) {
-        console.log(err)
-        return;
-    }
-    else console.log('done')
-})
+// fs.mkdir('uploads', (err) => {
+//     if (err) {
+//         console.log(err)
+//         return;
+//     }
+//     else console.log('done')
+// })
+
+// fs.readdir('uploads', (err, files) => {
+//     if(err) console.log(err)
+//     else console.log(files)
+// })
+
