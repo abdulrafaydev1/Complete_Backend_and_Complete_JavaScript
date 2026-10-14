@@ -2,7 +2,10 @@ const express = require('express')
 const form = require('./routes/form')
 const app = express()
 
-// kya hall hai app ka mujhe nahi pata
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
+
 
 app.use('/form', form)
 
