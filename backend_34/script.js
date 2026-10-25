@@ -1,2 +1,5 @@
-let name = "Ali";
-let age = 20;
+if (true) {
+  var age = 20;
+}
+
+console.log(age); // 20
