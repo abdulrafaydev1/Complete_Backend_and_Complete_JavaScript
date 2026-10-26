@@ -3,3 +3,6 @@ if (true) {
 }
 
 console.log(age); // 20
+
+var a = rafay;
+
